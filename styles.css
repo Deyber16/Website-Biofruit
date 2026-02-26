@@ -1,0 +1,887 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --primary-color: #4CAF50;
+    --background-color: #ffffff;
+    --dark--color: #000000;
+    --second-color: #ffdf00;
+    --third-color: #454444;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*utilidades*/
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+/*header*/
+.container-hero{
+    background-color: var(--primary-color);
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;   
+}
+
+.customer-login{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer ;
+}
+
+.customer-login i{
+    font-size: 3.3rem;
+}
+
+.content-customer-login{
+    font-size: 1.6rem;
+    color: var(--background-color);
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-logo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.container-logo h1 a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 3rem;
+    letter-spacing: -1px;
+}
+
+.container-logo i {
+    color: var(--background-color);
+    font-size: 4rem;
+}
+
+.customer-login i {
+    color: #ffffff;
+    font-size: 2rem;
+}
+/*navbar*/
+
+.container-navar{
+    background-color: var(--background-color);
+    margin-top: 2rem;
+}
+/**/
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    gap: 5rem;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--third-color);
+    font-weight: 700;
+    position: relative;
+}
+
+.menu a::after{
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: var(--background-color);
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity:0;
+    transition:all .3s ease;
+}
+
+.menu a:hover::after{
+    opacity:1;
+}
+
+.menu a:hover{
+    color:#4CAF50;
+}
+
+/*img inicio*/
+
+/*img*/
+.banner{
+    background-image: url("https://i.ibb.co/s9yBsx81/uchuvas.jpg"); /* cambia la ruta */
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    position: relative;
+    color: white;
+}
+
+.banner{
+    margin-top: 2rem; /* Baja la imagen */
+}
+
+.overlay{
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+/*texto*/
+.content-banner{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.subtitle{
+    font-size: 1.8rem;
+}
+
+.title{
+    font-size: 3rem;
+    max-width: 70rem;
+}
+/*Cuadros pequeños con efecto vidrio*/
+.cards{
+    display: flex;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+.card{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 28rem;
+    transition: 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card i{
+    font-size: 3.5rem;
+    color: #f1c40f;
+    margin-bottom: 1rem;
+}
+
+.card h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card p{
+    font-size: 1.5rem;
+}
+
+/*Certificaciones*/
+.certificaciones{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1.5rem;
+}
+
+.certificados{
+    display: flex;
+    gap: 3rem;
+}
+
+.cert{
+    background: white;
+    color: #4CAF50;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+/*seccion quienes somos*/
+.quienes-somos{
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title{
+    font-size: 3rem;
+    color: #4CAF50;
+    margin-bottom: 2rem;
+}
+
+.section-description{
+    max-width: 80rem;
+    margin: 0 auto 5rem auto;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/*Tarjetas grandes (Misión, Visión, Valores)*/
+.cards-info{
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+}
+
+.card-info{
+    background: rgb(213, 212, 212);
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    width: 35rem;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.card-info i{
+    font-size: 3rem;
+    color: #4CAF50;
+    margin-bottom: 2rem;
+}
+
+.card-info h3{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p{
+    font-size:1.5rem;
+    line-height: 1.6;
+}
+
+/*valores con íconos circulares*/
+.valores{
+    padding: 6rem 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.valores-grid{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.valor-item{
+    width: 20rem;
+}
+
+.valor-item i{
+    font-size: 3rem;
+    color: #4CAF50; /* verde */
+    margin-bottom: 1.5rem;
+}
+
+.valor-item h4{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.valor-item span{
+    font-size: 1.4rem;
+}
+
+
+/* ===============================
+   SECCIÓN NUESTRO EQUIPO
+=================================*/
+
+.nuestro-equipo{
+    padding: 8rem 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.equipo-grid{
+    display: flex;
+    gap: 4rem;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.equipo-card{
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 35rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.equipo-card:hover{
+    transform: translateY(-8px);
+}
+
+.equipo-img{
+    position: relative;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.equipo-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.autor{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+.equipo-info{
+    padding: 2rem;
+}
+
+.equipo-info h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.equipo-info p{
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.nuestro-equipo{
+    padding: 4rem 0 8rem 0; 
+}
+
+/* ===============================
+   BLOQUE HORIZONTAL CERTIFICACIONES
+=================================*/
+
+.certificaciones-modelo{
+    padding: 6rem 0;
+    background-color: #f5f5f5;
+}
+
+.bloque-horizontal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+}
+
+/* Parte izquierda */
+
+.certificaciones-box{
+    flex: 1;
+    text-align: center;
+}
+
+.certificaciones-box h2{
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.certificaciones-items{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.cert-item{
+    text-align: center;
+}
+
+.icon-circle{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem auto;
+}
+
+.icon-circle i{
+    font-size: 4rem;
+}
+
+.green{
+    background-color: #dfeadf;
+    color: #4CAF50;
+}
+
+.yellow{
+    background-color: #f3ead5;
+    color: #f1b600;
+}
+
+.cert-item h4{
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+}
+
+.cert-item span{
+    font-size: 1.3rem;
+    color: #555;
+}
+
+/* Parte derecha */
+
+.modelo-box{
+    flex: 1;
+}
+
+.modelo-box h2{
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.modelo-box p{
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.certificaciones-modelo{
+    padding: 1rem 0 5rem 0;
+}
+
+/* ===============================
+   ETAPAS DEL CULTIVO
+=================================*/
+
+.etapas-cultivo{
+    padding: 6rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.linea-proceso{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 5rem 0;
+}
+
+.linea-proceso::before{
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    width: 90%;
+    height: 3px;
+    background: #e0c66c;
+    z-index: 0;
+}
+
+.paso{
+    width: 22rem;
+    position: relative;
+    z-index: 1;
+}
+
+.icono{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    font-size: 2rem;
+    color: white;
+}
+
+.cert-green{
+    background-color: #dfeadf;
+    color: #4CAF50;
+}
+
+.cert-yellow{
+    background-color: #f3ead5;
+    color: #f1b600;
+}
+
+.numero{
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 25px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.paso h4{
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+}
+
+.paso p{
+    font-size: 1.3rem;
+    color: #555;
+}
+
+.etapas-cultivo .green{
+    background-color: #4CAF50;
+}
+
+.etapas-cultivo .yellow{
+    background-color: #f1b600;
+}
+
+/* ===============================
+   PRÁCTICAS
+=================================*/
+
+.subtitulo{
+    margin-top: 6rem;
+}
+
+.practicas-grid{
+    display: flex;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.practica-card{
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 25rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.practica-card i{
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.practica-card h4{
+    font-size: 1.5rem;
+    margin-bottom: .8rem;
+}
+
+.practica-card p{
+    font-size: 1.3rem;
+    color: #666;
+}
+
+.practicas-grid{
+    display: flex;
+    justify-content: center;   
+    gap: 3rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;         
+}
+
+/* ===============================
+   SECCIÓN HAZTE SOCIO
+=================================*/
+
+.hazte-socio{
+    padding: 8rem 0;
+    background-color: #f5f5f5;
+}
+
+/* GALERÍA */
+
+.socio-galeria{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.img-grande{
+    flex: 2;
+    position: relative;
+}
+
+.img-grande img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.img-pequenas{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.img-pequenas div{
+    position: relative;
+}
+
+.img-pequenas img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.autor{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+/* TEXTO */
+
+.socio-texto{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.socio-texto h3{
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.socio-texto p{
+    font-size: 1.5rem;
+    max-width: 60rem;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* BENEFICIOS */
+
+.beneficios-grid{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.beneficio-card{
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 25rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.beneficio-card:hover{
+    transform: translateY(-6px);
+}
+
+.beneficio-card i{
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.beneficio-card h4{
+    font-size: 1.5rem;
+    margin-bottom: .8rem;
+}
+
+.beneficio-card p{
+    font-size: 1.3rem;
+    color: #666;
+}
+
+
+.socio-galeria{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    max-width: 80rem;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galeria {
+    margin-bottom: 2rem;
+}
+
+.formulario-section{
+    padding: 6rem 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-container{
+    width: 100%;
+    max-width: 650px;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.formulario-container h2{
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 2rem;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.campo label{
+    font-weight: 500;
+}
+
+.campo input,
+.campo textarea{
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #f3f3f3;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.campo textarea{
+    min-height: 120px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus{
+    outline: none;
+    border-color: #4CAF50;
+    background: white;
+}
+
+button{
+    margin-top: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #3d9442;
+}
+
+.formulario-section{
+    padding: 2rem 0 3rem 0;
+}
+
+.campo textarea{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ===============================
+   RESEÑAS
+=================================*/
+
+.resenas{
+    padding: 3rem 0;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+.resenas-grid{
+    display: flex;
+    gap: 4rem;
+    margin-top: 4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resena-card{
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    width: 45rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.resena-card:hover{
+    transform: translateY(-6px);
+}
+
+.resena-header{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.resena-header img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.resena-header h4{
+    font-size: 1.6rem;
+    margin-bottom: .3rem;
+}
+
+.resena-header span{
+    font-size: 1.3rem;
+    color: #777;
+}
+
+.resena-texto{
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #2e3d4f;
+    line-height: 1.6;
+}
+
+
